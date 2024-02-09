@@ -151,6 +151,13 @@ class SubtitleSync {
             subtitleSyncContainer.classList.add('hide');
         }
     }
+
+    update(updateValue) {
+        SubtitleSync.prototype.toggle();
+
+        const value = updateValue(parseFloat(subtitleSyncSlider.value));
+        subtitleSyncSlider.updateOffset(value);
+    }
 }
 
 export default SubtitleSync;
